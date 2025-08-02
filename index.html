@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>型修依頼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1em;
+      background-color: #f9f9f9;
+    }
+    label, select, textarea {
+      display: block;
+      margin-bottom: 1em;
+      font-size: 1.1em;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      font-size: 1em;
+    }
+    .checkbox-group {
+      margin-bottom: 1em;
+    }
+    .checkbox-item {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+    .checkbox-inline {
+      display: flex;
+      gap: 1em;
+    }
+    button {
+      width: 100%;
+      padding: 1em;
+      font-size: 1.2em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 金型 -->
+  <label for="mold">金型</label>
+  <select id="mold">
+    <option value="6040425-1_スルーアンカー">6040425-1_スルーアンカー</option>
+    <option value="6046955-1_スルーアンカー">6046955-1_スルーアンカー</option>
+    <option value="6049540-1_スルーアンカー">6049540-1_スルーアンカー</option>
+    <option value="6078033/34-1_ホンダ羽">6078033/34-1_ホンダ羽</option>
+    <option value="6078033/34-2_ホンダ羽">6078033/34-2_ホンダ羽</option>
+    <option value="6099698-1_スルー">6099698-1_スルー</option>
+    <option value="6099698-2_スルー">6099698-2_スルー</option>
+    <option value="6149480-1_フォードPOM">6149480-1_フォードPOM</option>
+    <option value="6155976-1_3mmタング">6155976-1_3mmタング</option>
+    <option value="6155976-2_3mmタング">6155976-2_3mmタング</option>
+    <option value="6155976-3_3mmタング">6155976-3_3mmタング</option>
+    <option value="6155976-4_3mmタング">6155976-4_3mmタング</option>
+    <option value="6155976-5_3mmタング">6155976-5_3mmタング</option>
+    <option value="6157989-1_3.2M2">6157989-1_3.2M2</option>
+    <option value="6157989-2_3.2M2">6157989-2_3.2M2</option>
+    <option value="6157989-3_3.2M2">6157989-3_3.2M2</option>
+    <option value="6157989-4_3.2M2">6157989-4_3.2M2</option>
+    <option value="6157989-5_3.2M2">6157989-5_3.2M2</option>
+    <option value="6157989-6_3.2M2">6157989-6_3.2M2</option>
+    <option value="6157989-7_3.2M2">6157989-7_3.2M2</option>
+    <option value="6157989-8_3.2M2">6157989-8_3.2M2</option>
+    <option value="6157990-1_3.2M3">6157990-1_3.2M3</option>
+    <option value="6157990-2_3.2M3">6157990-2_3.2M3</option>
+    <option value="6197353-1_3rdスルー">6197353-1_3rdスルー</option>
+    <option value="6206950/51-3_クライスラー">6206950/51-3_クライスラー</option>
+    <option value="6207325-_ホンダ片羽RH">6207325-_ホンダ片羽RH</option>
+    <option value="6207326-_ホンダ片羽LH">6207326-_ホンダ片羽LH</option>
+    <option value="6209886-_スルーアンカーR">6209886-_スルーアンカーR</option>
+    <option value="6209887-_スルーアンカーL">6209887-_スルーアンカーL</option>
+    <option value="6223000-1_3.2ML1　25°">6223000-1_3.2ML1　25°</option>
+    <option value="6223000-2_3.2ML1　25°">6223000-2_3.2ML1　25°</option>
+    <option value="6227335-1_12.5°">6227335-1_12.5°</option>
+    <option value="6227335-2_12.5°">6227335-2_12.5°</option>
+    <option value="6227335-3_12.5°">6227335-3_12.5°</option>
+    <option value="6249030-1_GM POM羽根無">6249030-1_GM POM羽根無</option>
+    <option value="6249030-2_GM POM羽根無">6249030-2_GM POM羽根無</option>
+    <option value="6255615-2_北米POM(GM羽)スルー">6255615-2_北米POM(GM羽)スルー</option>
+    <option value="6255615-3_北米POM(GM羽)スルー">6255615-3_北米POM(GM羽)スルー</option>
+    <option value="6255615-4_北米POM(GM羽)スルー">6255615-4_北米POM(GM羽)スルー</option>
+    <option value="6255615-5_北米POM(GM羽)スルー">6255615-5_北米POM(GM羽)スルー</option>
+    <option value="6282846-2_日産ﾌﾙPOM">6282846-2_日産ﾌﾙPOM</option>
+    <option value="6282846-4_日産ﾌﾙPOM">6282846-4_日産ﾌﾙPOM</option>
+    <option value="6282846-5_日産ﾌﾙPOM">6282846-5_日産ﾌﾙPOM</option>
+    <option value="6282846-6_日産ﾌﾙPOM">6282846-6_日産ﾌﾙPOM</option>
+    <option value="6282846-7_日産ﾌﾙPOM">6282846-7_日産ﾌﾙPOM</option>
+    <option value="6282846-8_日産ﾌﾙPOM">6282846-8_日産ﾌﾙPOM</option>
+    <option value="6282846-9_日産ﾌﾙPOM">6282846-9_日産ﾌﾙPOM</option>
+    <option value="6301603-4_北米ｸﾗｲｽﾗｰ">6301603-4_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6301603-5_北米ｸﾗｲｽﾗｰ">6301603-5_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6301603-6_北米ｸﾗｲｽﾗｰ">6301603-6_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6301603-7_北米ｸﾗｲｽﾗｰ">6301603-7_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6301603-8_北米ｸﾗｲｽﾗｰ">6301603-8_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6301603-9_北米ｸﾗｲｽﾗｰ">6301603-9_北米ｸﾗｲｽﾗｰ</option>
+    <option value="6302414-1_北米クライスラーブッシュ">6302414-1_北米クライスラーブッシュ</option>
+    <option value="6302414-2_北米クライスラーブッシュ">6302414-2_北米クライスラーブッシュ</option>
+    <option value="6302414-3_北米クライスラーブッシュ">6302414-3_北米クライスラーブッシュ</option>
+    <option value="6331121-1_中国羽">6331121-1_中国羽</option>
+    <option value="6331121-2_中国羽">6331121-2_中国羽</option>
+    <option value="6331121-3_中国羽">6331121-3_中国羽</option>
+    <option value="6331121-4_中国羽">6331121-4_中国羽</option>
+    <option value="6331121-5_中国羽">6331121-5_中国羽</option>
+    <option value="6331121-6_中国羽">6331121-6_中国羽</option>
+    <option value="6331121-7_中国羽">6331121-7_中国羽</option>
+    <option value="6331121-8_中国羽">6331121-8_中国羽</option>
+    <option value="6331121-9_中国羽">6331121-9_中国羽</option>
+    <option value="6331121-10_中国羽">6331121-10_中国羽</option>
+    <option value="6337076-2_ALVロッキング">6337076-2_ALVロッキング</option>
+    <option value="6337076-3_ALVロッキング">6337076-3_ALVロッキング</option>
+    <option value="6337076-4_ALVロッキング">6337076-4_ALVロッキング</option>
+    <option value="6337076-5_ALVロッキング">6337076-5_ALVロッキング</option>
+    <option value="6337076-6_ALVロッキング">6337076-6_ALVロッキング</option>
+    <option value="6337076-7_ALVロッキング">6337076-7_ALVロッキング</option>
+    <option value="6337076-8_ALVロッキング">6337076-8_ALVロッキング</option>
+    <option value="6337076-9_ALVロッキング">6337076-9_ALVロッキング</option>
+    <option value="6337076-10_ALVロッキング">6337076-10_ALVロッキング</option>
+    <option value="6420432-1_テスラ">6420432-1_テスラ</option>
+    <option value="6420432-2_テスラ">6420432-2_テスラ</option>
+    <option value="6420432-3_テスラ">6420432-3_テスラ</option>
+    <option value="6420432-4_テスラ">6420432-4_テスラ</option>
+    <option value="6420432-5_テスラ">6420432-5_テスラ</option>
+    <option value="6420432-6_テスラ">6420432-6_テスラ</option>
+    <option value="6503902-1_BRACKET HORN">6503902-1_BRACKET HORN</option>
+    <option value="6503902-2_BRACKET HORN">6503902-2_BRACKET HORN</option>
+    <option value="6541326-1_ジープ">6541326-1_ジープ</option>
+    <option value="6541848-1_700B サイドタング">6541848-1_700B サイドタング</option>
+    <option value="6541849-1_700B センタータング">6541849-1_700B センタータング</option>
+    
+  </select>
+
+  <!-- 修理内容 -->
+  <label>修理内容</label>
+  <div class="checkbox-group">
+    <div class="checkbox-inline">
+      <label>バリ<input type="checkbox" name="repair" value="通過部"> 通過部</label>
+      <label><input type="checkbox" name="repair" value="肩"> 肩</label>
+      <label><input type="checkbox" name="repair" value="ピン"> ピン</label>
+    </div>
+    <div class="checkbox-inline">
+      <label>　　<input type="checkbox" name="repair" value="ムネ"> ムネ</label>
+      <label><input type="checkbox" name="repair" value="マド"> マド</label>
+    </div>
+      <label><input type="checkbox" name="repair" value="スライド動作不良"> スライド動作不良</label>
+      <label><input type="checkbox" name="repair" value="ホットランナーOH"> ホットランナーOH</label>
+    
+  </div>
+
+  <!-- 修理詳細 -->
+  <label for="detail">修理詳細</label>
+  <textarea id="detail" rows="4" placeholder="上に項目がない場合はここに記入してください..."></textarea>
+
+  <!-- メール作成ボタン -->
+  <button onclick="createMail()">📧 メール作成</button>
+
+  <script>
+    function createMail() {
+      const mold = document.getElementById("mold").value;
+      const repairs = Array.from(document.querySelectorAll('input[name="repair"]:checked'))
+                           .map(el => el.value).join(", ");
+      const detail = document.getElementById("detail").value;
+
+      const subject = encodeURIComponent("型修依頼_" + mold);
+      const body = encodeURIComponent(
+        "【金型】\n" + mold +
+        "\n\n【修理内容】\n" + (repairs || "なし") +
+        "\n\n【修理詳細】\n" + detail +
+        "\n\n※必要なら写真を手動で添付してください"
+      );
+
+      const mailtoLink = `mailto:mitsuo.kaneko@uchiyama-seiko.co.jp?subject=${subject}&body=${body}&t=${Date.now()}`;
+      window.location.href = mailtoLink;
+    }
+  </script>
+
+</body>
+</html>
